@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Расчетные системы тестовое</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" type="image/ico" href="assets/images/favicon.ico"/><link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/main.css"/>
+    <script src="assets/scripts/main.dev.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header js-header">
+        <div class="header__wrapper">
+          <button class="button header__lk-btn js-lk-btn">Войти</button><a class="header__logotype" href="/">
+            <svg>
+              <use xlink:href="assets/images/sprite.symbol.svg#logotype"></use>
+            </svg></a>
+          <div class="header__help help">
+            <button class="button help__btn js-help-btn">Помощь</button>
+            <ul class="header__help-list help__list js-help-list">
+              <li class="help__list-item"><a href="*">Как это работает</a></li>
+              <li class="help__list-item"><a href="*">Вопрос-ответ</a></li>
+              <li class="help__list-item"><a href="*">Служба поддержки</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="main js-main-page">
+          <div class="main__banner banner">
+            <h1 class="banner__title">Поиск начислений</h1>
+            <form class="banner__form search js-search-form" action="/">
+              <div class="input banner__search">
+                <input class="input__field banner__search-input js-form-input" type="text" placeholder="Введите данные поиска" name="accruals" data-invalid-class="error"/>
+                <p class="input__error-msg"></p>
+              </div>
+              <button class="button search__submit" type="submit">Найти</button>
+            </form><span class="banner__noty">Чем больше параметров введено, тем полнее результаты поиска</span>
+          </div>
+          <h1 class="main__title">Здесь можно оплатить</h1>
+          <nav class="main__nav"><a class="main__nav-link" href="*">Штрафы и пошлины ГИБДД</a><a class="main__nav-link" href="*">Судебные задолженности</a><a class="main__nav-link" href="*">Налоги</a><a class="main__nav-link" href="*">Услуги росреестра</a>
+            <p class="main__nav-link">и другие услуги</p>
+          </nav>
+          <div class="main__block">
+            <div class="content  ">
+              <div class="content__image" style="background-image: url(assets/images/0001.png)"><img src="assets/images/0001.png" hidden="hidden"/></div>
+              <div class="content__info">
+                <h2 class="content__title">Штрафы ГИБДД</h2>
+                <p class="content__info-text"><span class="content__info-paragraph">Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.</span><span class="content__info-paragraph">Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно.</span>
+                </p>
+                <div class="content__noty">
+                  <h4 class="title">платить Вовремя — дешевле!</h4>
+                  <p class="notyfication">В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%.  Для своевременной оплаты штрафов настройте уведомления в Личном кабинете.</p>
+                </div>
+                <div class="content__link"><a href="*">Пошлины ГИБДД</a>
+                  <p class="content__link__info">Перейдите по ссылке и укажите вид пошлины и отделение ГИБДД, предоставляющее вам услугу.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__block">
+            <div class="content  content_invert">
+              <div class="content__image" style="background-image: url(assets/images/0002.png)"><img src="assets/images/0002.png" hidden="hidden"/></div>
+              <div class="content__info">
+                <h2 class="content__title">Судебные задолженности</h2>
+                <p class="content__info-text"><span class="content__info-paragraph">Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства</span><span class="content__info-paragraph">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</span>
+                </p>
+                <div class="content__noty">
+                  <h4 class="title">Удобно!</h4>
+                  <p class="notyfication">Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__block">
+            <div class="content  ">
+              <div class="content__image" style="background-image: url(assets/images/0003.png)"><img src="assets/images/0003.png" hidden="hidden"/></div>
+              <div class="content__info">
+                <h2 class="content__title">Налоги</h2>
+                <p class="content__info-text"><span class="content__info-paragraph">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, усли у вас на руках есть квитанция.</span>
+                </p>
+                <div class="content__noty">
+                  <h4 class="title">Важно!</h4>
+                  <p class="notyfication">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__block">
+            <div class="content  content_invert">
+              <div class="content__image" style="background-image: url(assets/images/0004.png)"><img src="assets/images/0004.png" hidden="hidden"/></div>
+              <div class="content__info">
+                <h2 class="content__title">Услуги Росреестра</h2>
+                <p class="content__info-text"><span class="content__info-paragraph">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</span>
+                </p>
+                <div class="content__noty">
+                  <h4 class="title">нет кода?</h4>
+                  <p class="notyfication">Если у вас еще нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на оплату электронных услуг Росреестра.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main__partners partners">
+            <h2 class="partners__title">С нами работают</h2>
+            <div class="partners__list">
+              <div class="partners__list__partner partner">
+                <div class="partner__logo">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#partner1"></use>
+                  </svg>
+                </div>
+                <p class="partner__name">Партнер 1</p>
+              </div>
+              <div class="partners__list__partner partner">
+                <div class="partner__logo">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#partner2"></use>
+                  </svg>
+                </div>
+                <p class="partner__name">Компания-партнер с длинным названием</p>
+              </div>
+              <div class="partners__list__partner partner">
+                <div class="partner__logo">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#partner3"></use>
+                  </svg>
+                </div>
+                <p class="partner__name">Партнер 3</p>
+              </div>
+              <div class="partners__list__partner partner">
+                <div class="partner__logo">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#partner4"></use>
+                  </svg>
+                </div>
+                <p class="partner__name">Название партнера 4</p>
+              </div>
+              <div class="partners__list__partner partner">
+                <div class="partner__logo">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#partner5"></use>
+                  </svg>
+                </div>
+                <p class="partner__name">Компания-партнер 5</p>
+              </div>
+              <div class="partners__list__partner partner">
+                <div class="partner__logo">
+                  <svg>
+                    <use xlink:href="assets/images/sprite.symbol.svg#partner6"></use>
+                  </svg>
+                </div>
+                <p class="partner__name">Партнер 6 с длинным названием</p>
+              </div>
+            </div>
+          </div>
+          <div class="popup js-popup">
+            <form class="popup__login js-popup-form" action="/">
+              <div class="popup__close js-close-popup"></div>
+              <h1 class="popup__title">Введите логин и пароль для входа  в Личный кабинет</h1>
+              <div class="input login__wrapper-input">
+                <input class="input__field login__wrapper-input__field js-form-input" type="email" placeholder="Логин" name="Email" data-invalid-class="error" required="required"/>
+                <p class="input__error-msg"></p>
+              </div>
+              <div class="input login__wrapper-input">
+                <input class="input__field login__wrapper-input__field js-form-input" type="password" placeholder="Пароль" name="password" data-invalid-class="error" required="required"/>
+                <p class="input__error-msg"></p>
+              </div>
+              <button class="button popup__login__submit-btn" type="submit">Войти</button><a class="popup__link" href="*">Забыли пароль?</a><a class="popup__link" href="*">Регистрация</a>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__copyright copy">
+            <p class="copy__owner"><span class="copy__years">© 2012–2018</span><span class="copy__owner-name">ООО «Название компании»</span></p>
+            <div class="copy__security-image" style="background-image: url(assets/images/copy__image.png); "><img src="assets/images/copy__image.png" hidden="hidden"/></div>
+          </div>
+          <div class="footer__links">
+            <ul class="list">
+              <li class="list__item"><a href="*">О сервисе</a></li>
+              <li class="list__item"><a href="*">Способы оплаты</a></li>
+              <li class="list__item"><a href="*">Как это работает</a></li>
+              <li class="list__item"><a href="*">Партнерам</a></li>
+              <li class="list__item"><a href="*">Статьи и новости</a></li>
+            </ul>
+          </div>
+          <div class="footer__contacts contacts">
+            <div class="contacts__phone"><a href="tel(+7 000 00000)">8 800 123 4567</a><span>звонок по России бесплатный</span></div>
+            <div class="contacts__link"><a class="contacts__callback" href="*">Обратная связь</a><a class="contacts__vk" href="*">Мы вКонтакте</a></div>
+          </div>
+          <div class="footer__company">
+            <p>Дополнительные ссылки  и копирайты ООО «Фирма 2»</p>
+            <div class="footer__logo">
+              <svg>
+                <use xlink:href="assets/images/sprite.symbol.svg#footer__logo"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

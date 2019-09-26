@@ -1,0 +1,13 @@
+.checkbox.js-checkbox(class= checkbox.wrapper)
+	.checkbox__checked.js-checkbox-check
+		svg.checkbox__checked-icon
+			use(xlink:href=assetsDir + "images/sprite.symbol.svg#check")
+	input.checkbox__input.js-checkbox__input(
+		type="checkbox", 
+		class= checkbox.className,
+		id= checkbox.id,
+		required= checkbox.required,
+		name= checkbox.name,
+		value= checkbox.value,
+		)
+	label.checkbox__label.js-checkbox__label(class= checkbox.label.className, for= checkbox.id, error-msg= checkbox.msg)= checkbox.label.text

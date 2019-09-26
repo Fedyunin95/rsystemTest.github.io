@@ -1,0 +1,20 @@
+.main__block
+	.content(class=" " + block.class)
+		.content__image(style="background-image: url(" + assetsDir + "images/000" + (index + 1) + ".png)")
+			img(src=assetsDir + "images/000" + (index + 1) + ".png" hidden)
+		
+		.content__info
+			h2.content__title= block.title
+			
+			p.content__info-text
+				each paragraph in block.info
+					span.content__info-paragraph= paragraph
+
+			.content__noty
+				h4.title= block.noty.title
+				p.notyfication= block.noty.text
+
+			if (block.link)
+				.content__link
+					a(href= block.link.url)= block.link.title
+					p.content__link__info= block.link.text

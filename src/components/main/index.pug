@@ -1,0 +1,145 @@
+.main.js-main-page
+	.main__banner.banner()
+		h1.banner__title Поиск начислений
+		form.banner__form.search.js-search-form(action="/")
+			-
+				var input = {
+					wrapper: "banner__search",
+					class: "banner__search-input js-form-input",
+					type: "text",
+					placeholder: "Введите данные поиска",
+					name: "accruals",
+					required: false,
+				}
+
+			include ../_default/input/input.pug
+			- 
+				var button= {
+					disabled: false,
+					class: "search__submit",
+					text: "Найти",
+					type: "submit"
+				}
+
+			include ../_default/button/button.pug
+		span.banner__noty Чем больше параметров введено, тем полнее результаты поиска
+	h1.main__title Здесь можно оплатить
+
+	nav.main__nav
+		-
+			var links = [
+				{
+					link: "*",
+					text: "Штрафы и пошлины ГИБДД"
+				},
+				{
+					link: "*",
+					text: "Судебные задолженности"
+				},
+				{
+					link: "*",
+					text: "Налоги"
+				},
+				{
+					link: "*",
+					text: "Услуги росреестра"
+				}
+			]
+		each link in links
+			a.main__nav-link(href= link.link)= link.text
+		p.main__nav-link и другие услуги
+	-
+		var blocks = [
+			{
+				class: "",
+				title: "Штрафы ГИБДД",
+				info: [
+					"Для поиска укажите номера водительского удостоверения и свидетельства о регистрации ТС или номер штрафа.",
+					"Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты самостоятельно."
+				],
+				noty: {
+					title: "платить Вовремя — дешевле!",
+					text: "В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%.  Для своевременной оплаты штрафов настройте уведомления в Личном кабинете."
+				},
+				link: {
+					url: "*",
+					title: "Пошлины ГИБДД",
+					text: "Перейдите по ссылке и укажите вид пошлины и отделение ГИБДД, предоставляющее вам услугу."
+				}
+			},
+			{
+				class: "content_invert",
+				title: "Судебные задолженности",
+				info: [
+					"Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства",
+					"Вы можете указать реквизиты платежа самостоятельно, заполнив форму."
+				],
+				noty: {
+					title: "Удобно!",
+					text: "Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. Информацию о совершенных платежах сохраняйте в Личном кабинете."
+				}
+			},
+			{
+				class: "",
+				title: "Налоги",
+				info: [
+					"Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, усли у вас на руках есть квитанция."
+				],
+				noty: {
+					title: "Важно!",
+					text: "Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц."
+				}
+			},
+			{
+				class: "content_invert",
+				title: "Услуги Росреестра",
+				info: [
+					"В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре."
+				],
+				noty: {
+					title: "нет кода?",
+					text: "Если у вас еще нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на оплату электронных услуг Росреестра."
+				}
+			},
+		]
+	each block,index in blocks
+		include ../content-block/index.pug
+
+	.main__partners.partners
+		h2.partners__title С нами работают
+		-
+			var partners = [
+				{
+					logo: "partner1",
+					name: "Партнер 1"
+				},
+				{
+					logo: "partner2",
+					name: "Компания-партнер с длинным названием"
+				},
+				{
+					logo: "partner3",
+					name: "Партнер 3"
+				},
+				{
+					logo: "partner4",
+					name: "Название партнера 4"
+				},
+				{
+					logo: "partner5",
+					name: "Компания-партнер 5"
+				},
+				{
+					logo: "partner6",
+					name: "Партнер 6 с длинным названием"
+				}
+			]
+		.partners__list
+			each partner in partners
+				.partners__list__partner.partner
+					.partner__logo
+						svg
+							use(xlink:href=assetsDir + "images/sprite.symbol.svg#" + partner.logo)
+					p.partner__name= partner.name
+
+	include ../login/index.pug

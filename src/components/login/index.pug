@@ -1,0 +1,36 @@
+.popup.js-popup
+	form.popup__login.js-popup-form(action="/")
+		.popup__close.js-close-popup
+		h1.popup__title Введите логин и пароль для входа  в Личный кабинет
+
+		-
+			var inputs = [
+				{
+					wrapper: "login__wrapper-input",
+					class: "login__wrapper-input__field js-form-input",
+					required: true,
+					type: "email",
+					placeholder: "Логин",
+					name: "Email"
+				},
+				{
+					wrapper: "login__wrapper-input",
+					class: "login__wrapper-input__field js-form-input",
+					required: true,
+					type: "password",
+					placeholder: "Пароль",
+					name: "password"
+				}
+			]
+		each input in inputs
+			include ../_default/input/input.pug
+		-
+			var button = {
+				disabled: false,
+				class: "popup__login__submit-btn",
+				type: "submit",
+				text: "Войти"
+			}
+		include ../_default/button/button.pug
+		a.popup__link(href="*") Забыли пароль?
+		a.popup__link(href="*") Регистрация

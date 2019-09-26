@@ -1,0 +1,6 @@
+/.htaccess
+/.DS_Store
+/**/.DS_Store
+/node_modules
+/bower_components
+/package-lock.json

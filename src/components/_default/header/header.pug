@@ -1,0 +1,33 @@
+header.header.js-header
+	.header__wrapper
+
+		- 
+			button = {
+				text : "Войти",
+				disable: false,
+				class: "header__lk-btn js-lk-btn",
+			}
+
+		include ../button/button.pug
+
+		a.header__logotype(href="/")
+			svg
+				use(xlink:href= assetsDir + "images/sprite.symbol.svg#logotype")
+
+		.header__help.help
+			- 
+				button = {
+					text : "Помощь",
+					disable: false,
+					class: "help__btn js-help-btn",
+				}
+
+			include ../button/button.pug
+
+			ul.header__help-list.help__list.js-help-list
+				li.help__list-item
+					a(href="*") Как это работает
+				li.help__list-item
+					a(href="*") Вопрос-ответ
+				li.help__list-item
+					a(href="*") Служба поддержки

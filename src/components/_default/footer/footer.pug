@@ -1,0 +1,49 @@
+footer.footer
+	.footer__wrapper
+		.footer__copyright.copy
+			p.copy__owner
+				span.copy__years © 2012–2018
+				span.copy__owner-name ООО «Название компании»
+			.copy__security-image(style="background-image: url("+ assetsDir +"images/copy__image.png); ")
+				img(src=assetsDir + "images/copy__image.png" hidden)
+
+		.footer__links
+			ul.list
+				-
+					var items = [
+						{
+							link: "*",
+							text: "О сервисе",
+						},
+						{
+							link: "*",
+							text: "Способы оплаты",
+						},
+						{
+							link: "*",
+							text: "Как это работает",
+						},
+						{
+							link: "*",
+							text: "Партнерам",
+						},
+						{
+							link: "*",
+							text: "Статьи и новости",
+						},
+					]
+				each item in items 
+					li.list__item
+						a(href= item.link)= item.text
+		.footer__contacts.contacts
+			.contacts__phone
+				a(href="tel(+7 000 00000)") 8 800 123 4567
+				span звонок по России бесплатный
+			.contacts__link
+				a.contacts__callback(href="*") Обратная связь
+				a.contacts__vk(href="*") Мы вКонтакте
+		.footer__company
+			p Дополнительные ссылки  и копирайты ООО «Фирма 2»
+			.footer__logo
+				svg
+					use(xlink:href= assetsDir + "images/sprite.symbol.svg#footer__logo")

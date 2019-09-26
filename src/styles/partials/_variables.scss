@@ -1,0 +1,23 @@
+// breakpoints
+$mobile-small: 480px; // mobile 480px and less
+$mobile: 767px; // mobile 767px and less
+$tablet-small: 1020px; // tablet 1020px and less
+$tablet: 1024px; // tablet 1024px and less
+$desk-small: 1259px; // desktop 1259px and less
+$retina: 1.5;  // standart retina > 1.5x
+$retina-hd: 2.5; // hd retina > 2.5x
+
+// Breakpoints
+$bp-mobile-max: 1200px;
+$bp-desktop-min: ($bp-mobile-max + 1px);
+
+$container-max-width-inner: 1200px;
+$container-winger-padding-mobile: 16px;
+$container-winger-padding: 40px;
+
+//main colors
+$primary-color: #0777ba;
+
+// Body
+$body-color-bg: #fff;
+$body-color-text: #333;

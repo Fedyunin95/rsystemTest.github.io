@@ -1,0 +1,4 @@
+.select.js-select-wrapper(class= select.wrapper_class)
+	select.input__field.select-field.js-select(class= select.className, name= select.name)
+		each select_option in select.options
+			option(value= select_option.value, select_option.selected) !{select_option.text}

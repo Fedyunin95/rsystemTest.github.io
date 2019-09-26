@@ -1,0 +1,28 @@
+.input(class= input.wrapper)
+	if input.required
+		input.input__field(
+			class= input.class, 
+			type= input.type,
+			placeholder= input.placeholder,
+			name= input.name,
+			max= input.max,
+			min= input.min,
+			value= input.val,
+			data-invalid-class="error",
+			required= true
+		)
+		p.input__error-msg= input.msg
+	else
+		input.input__field(
+			class= input.class, 
+			type= input.type,
+			placeholder= input.placeholder,
+			name= input.name,
+			max= input.max,
+			min= input.min,
+			value= input.val,
+			error-msg= input.msg,
+			data-invalid-class="error",
+			required= false
+		)
+		p.input__error-msg= input.msg

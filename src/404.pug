@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="ru")
+
+    include components/_default/head/head.pug
+
+    body
+
+        div.wrapper
+
+            - var headerTheme = "compact";
+
+            include components/_default/header/header.pug
+
+            main.main.error-page
+                
+                if renderError
+
+                    div
+                        br
+                        | #{renderError.message}
+                //- include components/error-page/error-page.pug
+
+
+            - var isAdvantagesHidden = true;
+            - var isFooterHidingMobile = true;            
+
+            include components/_default/footer/footer.pug

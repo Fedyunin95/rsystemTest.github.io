@@ -1,0 +1,32 @@
+if checked= radiobtn.checked
+	.radiobtn.js-radiobtn(class= radiobtn.wrapper base-class= radiobtn.wrapper)
+		.radiobtn__checked.js-radiobtn-check.checked
+		input.radiobtn__input.js-radiobtn__input(
+			type="radio", 
+			class= radiobtn.className,
+			id= radiobtn.id,
+			name= radiobtn.name
+			checked= radiobtn.checked
+			)
+		label.radiobtn__label.js-radiobtn__label(class= radiobtn.label.className, for= radiobtn.id) !{radiobtn.label.text}
+else if radiobtn.disable
+	.radiobtn.disable(class= radiobtn.wrapper base-class= radiobtn.wrapper)
+		.radiobtn__checked.js-radiobtn-check()
+		input.radiobtn__input.js-radiobtn__input(
+			type="radio", 
+			class= radiobtn.className,
+			id= radiobtn.id,
+			name= radiobtn.name,
+			readonly
+			)
+		label.radiobtn__label.js-radiobtn__label(class= radiobtn.label.className, for= radiobtn.id) !{radiobtn.label.text}
+else
+	.radiobtn.js-radiobtn(class= radiobtn.wrapper base-class= radiobtn.wrapper)
+		.radiobtn__checked.js-radiobtn-check()
+		input.radiobtn__input.js-radiobtn__input(
+			type="radio", 
+			class= radiobtn.className,
+			id= radiobtn.id,
+			name= radiobtn.name,
+			)
+		label.radiobtn__label.js-radiobtn__label(class= radiobtn.label.className, for= radiobtn.id) !{radiobtn.label.text}
